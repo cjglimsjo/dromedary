@@ -15,7 +15,7 @@ public class ChoiceRoute<T> {
         this.unmatchedExchanges = new ArrayList<>(parentRoute.getExchanges());
     }
 
-    public Route<T> _if(Predicate<T> predicate) {
+    public Route<T> choice(Predicate<T> predicate) {
         List<Exchange<T>> matchingExchanges = unmatchedExchanges.stream()
                 .filter(predicate::matches)
                 .collect(Collectors.toList());
@@ -24,14 +24,14 @@ public class ChoiceRoute<T> {
         return new Route<>(matchingExchanges, this);
     }
 
-    public Route<T> _else() {
+    public Route<T> otherwise() {
         List<Exchange<T>> matchingExchanges = new ArrayList<>(unmatchedExchanges);
 
         unmatchedExchanges.removeAll(matchingExchanges);
         return new Route<>(matchingExchanges, this);
     }
 
-    public Route<T> endIf() {
+    public Route<T> end() {
         return parentRoute;
     }
 }
