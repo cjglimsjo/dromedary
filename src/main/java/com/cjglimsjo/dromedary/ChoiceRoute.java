@@ -31,7 +31,7 @@ public class ChoiceRoute<T> {
         return new Route<>(matchingExchanges, this);
     }
 
-    public Route<T> end() {
+    public Route<T> endChoiceRoute() {
         return parentRoute;
     }
 }

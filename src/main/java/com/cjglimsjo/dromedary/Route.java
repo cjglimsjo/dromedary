@@ -55,11 +55,11 @@ public class Route<T> {
         }
     }
 
-    public ChoiceRoute<T> startIf() {
+    public ChoiceRoute<T> startChoiceRoute() {
         return new ChoiceRoute<>(this);
     }
 
-    public ChoiceRoute<T> end() {
+    public ChoiceRoute<T> endChoice() {
         return parentChoiceRoute;
     }
 
