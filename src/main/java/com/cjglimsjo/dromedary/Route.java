@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import static com.cjglimsjo.dromedary.validation.Assert.notNull;
+import static org.apache.commons.lang3.Validate.notNull;
 
 public class Route<T> {
 

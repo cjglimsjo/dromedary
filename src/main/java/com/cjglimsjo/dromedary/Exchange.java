@@ -1,7 +1,7 @@
 package com.cjglimsjo.dromedary;
 
-import static com.cjglimsjo.dromedary.validation.Assert.isTrue;
-import static com.cjglimsjo.dromedary.validation.Assert.notNull;
+import static org.apache.commons.lang3.Validate.isTrue;
+import static org.apache.commons.lang3.Validate.notNull;
 
 public class Exchange<T> {
 
